@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invoice</title>
+  <link rel="stylesheet" type="text/css" href="invoice.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="invoice">
+    <div class="header">
+      <h1 contenteditable="true">Invoice</h1>
+      <div class="company-info">
+        <p contenteditable="true">Company Name</p>
+        <p contenteditable="true">Address</p>
+        <p contenteditable="true">City, State, ZIP</p>
+        <p contenteditable="true">Email: info@company.com</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="billing-info">
+        <h2>Billing Information</h2>
+        <p contenteditable="true">Client Name</p>
+        <p contenteditable="true">Client Address</p>
+        <p contenteditable="true">City, State, ZIP</p>
+        <p contenteditable="true">Email: client@example.com</p>
+      </div>
+      <table id="invoiceTable">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+            <th></th> <!-- Delete column -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Item 1</td>
+            <td contenteditable="true">2</td>
+            <td contenteditable="true">$10.00</td>
+            <td contenteditable="true">$20.00</td>
+            <td class="delete-column"><button class="deleteRowButton">Delete</button></td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Item 2</td>
+            <td contenteditable="true">1</td>
+            <td contenteditable="true">$15.00</td>
+            <td contenteditable="true">$15.00</td>
+            <td class="delete-column"><button class="deleteRowButton">Delete</button></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="subtotal">Subtotal</td>
+            <td contenteditable="true">$35.00</td>
+            <td></td> <!-- Empty column for consistency -->
+          </tr>
+          <tr>
+            <td colspan="3" class="tax">Tax (10%)</td>
+            <td contenteditable="true">$3.50</td>
+            <td></td> <!-- Empty column for consistency -->
+          </tr>
+          <tr>
+            <td colspan="3" class="total">Total</td>
+            <td contenteditable="true">$38.50</td>
+            <td></td> <!-- Empty column for consistency -->
+          </tr>
+        </tfoot>
+      </table>
+      <button id="addRowButton">Add Row</button>
+    </div>
+    <button id="convertButton">Convert to PDF</button>
+    <div class="footer">
+      <p>Thank you for your business!</p>
+    </div>
+  </div>
+  <script src="invoice.js"></script>
+</body>
+</html>
