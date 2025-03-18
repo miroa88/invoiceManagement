@@ -22,6 +22,10 @@ body {
   .company-info {
     text-align: right;
   }
+
+  .date-info {
+    text-align: left;
+  }
   
   .content {
     margin-bottom: 30px;

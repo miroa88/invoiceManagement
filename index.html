@@ -8,21 +8,26 @@
 <body>
   <div class="invoice">
     <div class="header">
-      <h1 contenteditable="true">Invoice</h1>
+      <div class="date-info">
+        <p contenteditable="true">02/01/2025</p>
+        <p contenteditable="true">#0003864700</p>
+      </div>
+      <h1>Invoice</h1>
       <div class="company-info">
         <p contenteditable="true">Company Name</p>
         <p contenteditable="true">Address</p>
         <p contenteditable="true">City, State, ZIP</p>
-        <p contenteditable="true">Email: info@company.com</p>
+        <p contenteditable="true">info@company.com</p>
       </div>
     </div>
     <div class="content">
       <div class="billing-info">
         <h2>Billing Information</h2>
+  
         <p contenteditable="true">Client Name</p>
         <p contenteditable="true">Client Address</p>
         <p contenteditable="true">City, State, ZIP</p>
-        <p contenteditable="true">Email: client@example.com</p>
+        <p contenteditable="true">client@example.com</p>
       </div>
       <table id="invoiceTable">
         <thead>
@@ -31,39 +36,25 @@
             <th>Quantity</th>
             <th>Unit Price</th>
             <th>Total</th>
-            <th></th> <!-- Delete column -->
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td contenteditable="true">Item 1</td>
-            <td contenteditable="true">2</td>
-            <td contenteditable="true">$10.00</td>
-            <td contenteditable="true">$20.00</td>
-            <td class="delete-column"><button class="deleteRowButton">Delete</button></td>
-          </tr>
-          <tr>
-            <td contenteditable="true">Item 2</td>
-            <td contenteditable="true">1</td>
-            <td contenteditable="true">$15.00</td>
-            <td contenteditable="true">$15.00</td>
-            <td class="delete-column"><button class="deleteRowButton">Delete</button></td>
-          </tr>
         </tbody>
         <tfoot>
           <tr>
             <td colspan="3" class="subtotal">Subtotal</td>
-            <td contenteditable="true">$35.00</td>
+            <td >$0.0</td>
             <td></td> <!-- Empty column for consistency -->
           </tr>
           <tr>
-            <td colspan="3" class="tax">Tax (10%)</td>
-            <td contenteditable="true">$3.50</td>
+            <td colspan="3" class="tax">Tax <a contenteditable="true" id="tax">10%</a></td>
+            <td >$0.0</td>
             <td></td> <!-- Empty column for consistency -->
           </tr>
           <tr>
             <td colspan="3" class="total">Total</td>
-            <td contenteditable="true">$38.50</td>
+            <td >$0.0</td>
             <td></td> <!-- Empty column for consistency -->
           </tr>
         </tfoot>
